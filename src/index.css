@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    --background: 35 50% 97%;
+    --foreground: 20 30% 15%;
+
+    --card: 35 40% 95%;
+    --card-foreground: 20 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 30% 15%;
+
+    --primary: 24 85% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 60% 90%;
+    --secondary-foreground: 20 30% 15%;
+
+    --muted: 35 30% 92%;
+    --muted-foreground: 20 15% 45%;
+
+    --accent: 145 40% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 25% 85%;
+    --input: 30 25% 85%;
+    --ring: 24 85% 48%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 35 40% 95%;
+    --sidebar-foreground: 20 30% 15%;
+    --sidebar-primary: 24 85% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 60% 90%;
+    --sidebar-accent-foreground: 20 30% 15%;
+    --sidebar-border: 30 25% 85%;
+    --sidebar-ring: 24 85% 48%;
+
+    /* Custom tokens */
+    --nav-bg: 220 25% 18%;
+    --nav-foreground: 35 40% 95%;
+    --hero-overlay: 24 60% 25%;
+    --saffron: 24 85% 48%;
+    --saffron-light: 30 80% 60%;
+    --cream: 35 50% 97%;
+    --dark-navy: 220 25% 18%;
+    --warm-gold: 40 75% 55%;
+    --forest-green: 145 40% 40%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 35 40% 95%;
+    --card: 220 25% 14%;
+    --card-foreground: 35 40% 95%;
+    --popover: 220 25% 14%;
+    --popover-foreground: 35 40% 95%;
+    --primary: 24 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 35 40% 95%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 35 20% 65%;
+    --accent: 145 40% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 24 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(24 85% 48% / 0.85), hsl(40 75% 55% / 0.7));
+  }
+  .gradient-saffron {
+    background: linear-gradient(135deg, hsl(24 85% 48%), hsl(30 80% 60%));
+  }
+  .gradient-cream {
+    background: linear-gradient(180deg, hsl(35 50% 97%), hsl(35 40% 92%));
+  }
+  .text-gradient-saffron {
+    background: linear-gradient(135deg, hsl(24 85% 48%), hsl(40 75% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
